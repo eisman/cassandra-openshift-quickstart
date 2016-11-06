@@ -23,7 +23,7 @@ then
     ./configure --prefix=$OPENSHIFT_DATA_DIR
     make install
     $OPENSHIFT_DATA_DIR/bin/python -V
-    rm Python-2.7.3.tar.bz2
+    rm $OPENSHIFT_DATA_DIR/Python-2.7.3.tar.bz2
 fi
 
 # install python setuptools
@@ -34,7 +34,7 @@ then
     tar zxf setuptools-0.6c11.tar.gz
     cd setuptools-0.6c11
     $OPENSHIFT_DATA_DIR/bin/python setup.py install
-    rm setuptools-0.6c11.tar.gz
+    rm $OPENSHIFT_DATA_DIR/setuptools-0.6c11.tar.gz
 fi
 
 # pip tools
@@ -45,7 +45,7 @@ then
     tar zxf pip-1.1.tar.gz
     cd pip-1.1
     $OPENSHIFT_DATA_DIR/bin/python setup.py install
-    rm pip-1.1.tar.gz
+    rm $OPENSHIFT_DATA_DIR/pip-1.1.tar.gz
 fi
 
 # install cassandra
